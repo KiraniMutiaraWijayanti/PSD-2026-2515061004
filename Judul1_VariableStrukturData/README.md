@@ -67,6 +67,61 @@ menu = { ... }: Menggunakan Dictionary dan Lambda untuk memetakan input angka pe
 
 while True:: Menjalankan perulangan menu terus-menerus hingga pengguna memilih angka '6' (Keluar).
 
+Output
+
+<img width="343" height="119" alt="output 1" src="https://github.com/user-attachments/assets/d2f2b46b-7ff4-4ae9-9740-0a3402d377ec" />
+
+Ketika kode di run maka ouput yang akan keluar adalah user diperintahkan untuk menginputkan menu yang akan dipilih.
+
+<img width="334" height="114" alt="output 2" src="https://github.com/user-attachments/assets/fbfd8a49-8695-4255-af5d-c5e3f0f84922" />
+
+Output berikutnya ketika user memilih menu 1, maka user akan diperintahkan untuk memasukkan menu makanan yang akan dipesan dan akan otomatis masuk ke antrean.
+
+<img width="378" height="131" alt="output 3" src="https://github.com/user-attachments/assets/1087cace-8589-490b-a3ec-dca72b49f6ec" />
+
+Output selanjutnya, ketika user memilih menu 2 untuk memasukkan pesanan yang akan di prioritaskan maka user akan diminta menginputkan makanan yang akan dimasukkan ke dalam pesanan prioritas dan otomatis menu makanan akan masuk ke antrean prioritas.
+
+<img width="378" height="131" alt="output 3" src="https://github.com/user-attachments/assets/12973a31-c1cd-4443-ab01-56054dbf7069" />
+
+Output berikutnya, saat user memilih menu 3, maka pesanan yang disajikan adalah pesanan yang sudah masuk ke dalam antrean prioritas pada menu sebelumnya.
+
+<img width="334" height="141" alt="Screenshot 2026-04-28 173047" src="https://github.com/user-attachments/assets/8865fe65-9673-44ef-9631-9543eb368d7f" />
+
+Pada output ini, ketika user ingin mengecek status pesanan maka akan keluar menu yang masuk antrean dan riwayat pesanan yang sudah disajikan
+
+<img width="326" height="143" alt="output 5" src="https://github.com/user-attachments/assets/ec0d9980-6436-4a1d-ae6d-257b656df3a0" />
+
+Pada menu no 5, saat user ingin membatalkan pesanan maka user cukup memilih menu 5 maka pesanan akan otomatis dibatalkan dan kembali ke antrean.
+
+<img width="326" height="143" alt="output 5" src="https://github.com/user-attachments/assets/92f24523-beea-4147-b9f1-9df9ec160759" />
+
+Output terakhir, saat user ingin keluar dari program maka user cukup memilih menu 6 dan akan keluar dari program.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
