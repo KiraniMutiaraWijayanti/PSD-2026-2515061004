@@ -12,7 +12,8 @@ Algoritma yang digunakan dalam program ini adalah Doubly Linked List untuk menge
 
 <img width="492" height="342" alt="ss 2" src="https://github.com/user-attachments/assets/e61f8d42-2e8b-46aa-b56a-ace73e7074d6" />
 
-<img width="492" height="342" alt="ss 2" src="https://github.com/user-attachments/assets/10615f29-428a-460e-89b4-e8f73e9f8cdf" />
+<img width="487" height="245" alt="ss 3" src="https://github.com/user-attachments/assets/2b8d2cd3-76f1-4622-9428-6b6484393086" />
+
 
 **Penjelasan Kode**
 
