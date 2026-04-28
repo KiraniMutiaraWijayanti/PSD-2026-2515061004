@@ -14,6 +14,14 @@ Algoritma yang digunakan dalam program ini adalah Doubly Linked List untuk menge
 
 <img width="492" height="342" alt="ss 2" src="https://github.com/user-attachments/assets/10615f29-428a-460e-89b4-e8f73e9f8cdf" />
 
+**Penjelasan Kode**
+
+class Node: Mendefinisikan cetak biru objek penyimpanan data
+def_init_(self, data): inisialisasi awal saat node dibuat
+self.data = data: Menyimpan nilai pesanan ke dalam node.
+self.next = self.prev = None: Menyiapkan dua "tangan" atau pointer; next untuk menunjuk ke depan dan prev untuk menunjuk ke belakang (Doubly Linked List).
+
+
 
 
 
