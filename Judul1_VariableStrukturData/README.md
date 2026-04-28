@@ -67,7 +67,7 @@ menu = { ... }: Menggunakan Dictionary dan Lambda untuk memetakan input angka pe
 
 while True:: Menjalankan perulangan menu terus-menerus hingga pengguna memilih angka '6' (Keluar).
 
-Output
+**Output**
 
 <img width="343" height="119" alt="output 1" src="https://github.com/user-attachments/assets/d2f2b46b-7ff4-4ae9-9740-0a3402d377ec" />
 
