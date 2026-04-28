@@ -81,7 +81,8 @@ Output berikutnya ketika user memilih menu 1, maka user akan diminta untuk memas
 
 Output selanjutnya, ketika user memilih menu 2 untuk memasukkan pesanan yang akan di prioritaskan maka user akan diminta menginputkan makanan yang akan dimasukkan ke dalam pesanan prioritas dan otomatis menu makanan akan masuk ke antrean prioritas.
 
-<img width="378" height="131" alt="output 3" src="https://github.com/user-attachments/assets/12973a31-c1cd-4443-ab01-56054dbf7069" />
+<img width="325" height="133" alt="output 4" src="https://github.com/user-attachments/assets/3fd56de7-e3d8-4a06-84e4-c5a205039cc4" />
+
 
 Output berikutnya, saat user memilih menu 3, maka pesanan yang disajikan adalah pesanan yang sudah masuk ke dalam antrean prioritas pada menu sebelumnya.
 
