@@ -71,11 +71,11 @@ while True:: Menjalankan perulangan menu terus-menerus hingga pengguna memilih a
 
 <img width="343" height="119" alt="output 1" src="https://github.com/user-attachments/assets/d2f2b46b-7ff4-4ae9-9740-0a3402d377ec" />
 
-Ketika kode di run maka ouput yang akan keluar adalah user diperintahkan untuk menginputkan menu yang akan dipilih.
+Ketika kode di run maka ouput yang akan keluar adalah user diminta untuk menginputkan menu yang akan dipilih.
 
 <img width="334" height="114" alt="output 2" src="https://github.com/user-attachments/assets/fbfd8a49-8695-4255-af5d-c5e3f0f84922" />
 
-Output berikutnya ketika user memilih menu 1, maka user akan diperintahkan untuk memasukkan menu makanan yang akan dipesan dan akan otomatis masuk ke antrean.
+Output berikutnya ketika user memilih menu 1, maka user akan diminta untuk memasukkan menu makanan yang akan dipesan dan akan otomatis masuk ke antrean.
 
 <img width="378" height="131" alt="output 3" src="https://github.com/user-attachments/assets/1087cace-8589-490b-a3ec-dca72b49f6ec" />
 
