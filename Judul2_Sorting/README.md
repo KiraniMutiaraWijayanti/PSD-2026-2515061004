@@ -53,11 +53,15 @@ Baris delapan belas: if __name__ == "__main__": main(): Memastikan fungsi main()
 
 <img width="376" height="129" alt="output 1" src="https://github.com/user-attachments/assets/4390388b-2326-4bfb-ae01-3c027df31cd0" />
 
+Ketika kode di run maka user akan menginputkan jumlah data umur dari mahasiswa dan program menerima inputan untuk diproses. Di program ini user mencoba untuk menginputkan 6 data umur mahasiswa.
+
 <img width="400" height="146" alt="output 2" src="https://github.com/user-attachments/assets/a90e5762-4c53-4fec-bd31-d9e4c71993d0" />
+
+Setelah memasukkan jumlah data umur mahasiswa, user di minta untuk memasukkan umur mahasiswa secara acak sebanyak 6 data umur mahasiswa sesuai dengan jumlah data umur mahasiswa yang diinputkan diawal.
 
 <img width="340" height="128" alt="output 3" src="https://github.com/user-attachments/assets/1a1cf6eb-6b0b-49c3-8c97-0269424b0168" />
 
-
+Program akan menampilkan data umur mahasiswa sebelum diurutkan dan sesudah diurutkan sesuai dengan aturan ascending dimulau dari nilai terkecil ke nilai terbesar.
 
 
 
