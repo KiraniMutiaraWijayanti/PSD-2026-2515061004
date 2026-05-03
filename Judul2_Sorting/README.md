@@ -11,6 +11,17 @@ Algoritma struktur data yang digunakan adalah Insertion Sort. Algoritma ini beke
 
 <img width="402" height="147" alt="source kode2" src="https://github.com/user-attachments/assets/359f5290-ed39-4106-91f4-c8e6fa80a942" />
 
+Baris pertama: def insertion_sort(arr, n): untuk mendefinisikan fungsi yang menerima dua parameter, yaitu daftar data (arr) dan jumlah elemen (n)
+
+Baris keduaa: for i in range(1, n): untuk melakukan perulangan yang di mulai dari indeks ke-1. Algoritma ini menganggap elemen pertama sudah terurut sehingga algoritma ini mulai membandingkan dari elemen kedua.
+
+Baris ketiga: temp = arr[i] digunakan untuk menyimpan nilai [i] agar nilai ini tidak ditimpa oleh arr[j] dan bisa digeser jika perlu.
+
+Baris keempat: j = i - 1 untuk menentukan indeks j sebagai elemen tepat di sebelah kiri indeks i untuk mulai dibandingkan.
+
+Baris kelima: while j >= 0 and arr[j] > temp: digunakan ketika belum mencapai awal daftar (j >= 0) dan nilai kiri di sebelah kiri lebih besar dari nilai temp, maka perulangan berlanjut.
+
+Baris keenam: 
 
 
 
