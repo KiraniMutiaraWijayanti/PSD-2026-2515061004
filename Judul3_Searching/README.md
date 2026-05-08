@@ -72,7 +72,7 @@ Baris standar Python ini memastikan bahwa program akan langsung berjalan otomati
 
 Saat kode coba di run maka user diminta untuk memasukkan nama karyawan yang akan di cek kehadirannya. Seperti pada output user mencoba mengecek nama Dewi, Maka program akan menampilkan Karyawan Dewi ditemukan 1 sekali yang artinya Dewi telah melakukan tapping absen dalam sehari.
 
-
+https://youtu.be/sDE-hgGKzdo
 
 
 
