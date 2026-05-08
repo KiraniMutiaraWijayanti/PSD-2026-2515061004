@@ -70,7 +70,7 @@ Baris standar Python ini memastikan bahwa program akan langsung berjalan otomati
 
 <img width="721" height="133" alt="output 1" src="https://github.com/user-attachments/assets/622ba39a-1e8e-41ce-af2b-827dee3f7a80" />
 
-
+Saat kode coba di run maka user diminta untuk memasukkan nama karyawan yang akan di cek kehadirannya. Seperti pada output user mencoba mengecek nama Dewi, Maka program akan menampilkan Karyawan Dewi ditemukan 1 sekali yang artinya Dewi telah melakukan tapping absen dalam sehari.
 
 
 
