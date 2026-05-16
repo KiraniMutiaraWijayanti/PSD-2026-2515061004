@@ -181,3 +181,5 @@ Saat program berjalan, tumpukan awalnya kosong. Pengguna kemudian memasukkan dua
 Ketika pengguna memilih menu untuk menghapus data, program akan mengeluarkan "Buku Matematika Diskrit" terlebih dahulu karena posisinya yang paling atas. Setelah itu, tumpukan menyisakan "Buku Logika", yang kemudian langsung dikeluarkan juga saat pengguna melakukan penghapusan untuk kedua kalinya.
 
 Pada akhirnya, ketika pengguna mencoba menampilkan seluruh isi tumpukan, semua data telah habis terhapus sehingga program mendeteksi array dalam keadaan bersih dan menampilkan pesan bahwa tumpukan sudah kosong.
+
+https://youtu.be/16UDVIzDryA
