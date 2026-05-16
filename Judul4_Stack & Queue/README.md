@@ -11,7 +11,6 @@
 <img width="619" height="473" alt="kode 3" src="https://github.com/user-attachments/assets/19d11c3d-69b1-4ac8-8f96-3e19214e7317" />
 
 class StackArray:
-
 Untuk mendeklarasikan kelas baru bernama StackArray
 
 **Output**
