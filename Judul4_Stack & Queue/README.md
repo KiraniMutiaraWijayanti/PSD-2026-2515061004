@@ -1,6 +1,7 @@
 **Program Tumpukan Buku di Perpustakaan**
 
 **Deskripsi Singkat**
+
 Aplikasi ini merupakan simulasi tumpukan buku interaktif yang dioperasikan lewat perintah teks di terminal. Di sini, kita bisa dengan mudah menambah buku baru, mengambil buku dari posisi paling atas, mengintip buku teratas tanpa harus memindahkannya, atau melihat semua daftar buku yang ada. Supaya aplikasi tidak mendadak macet atau error saat kita salah mengetikkan pilihan, program ini sudah dipasang sistem penangkap kesalahan otomatis.
 
 Di balik layarnya, program ini memanfaatkan struktur data Stack (Tumpukan) dengan basis array berukuran tetap. Aturan main dari tumpukan ini memakai prinsip LIFO (Last In, First Out). Sederhananya, buku yang paling terakhir kita taruh di atas tumpukan justru akan menjadi buku yang pertama kali diambil saat tumpukan itu dibongkar.
