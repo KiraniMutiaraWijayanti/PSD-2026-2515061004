@@ -22,6 +22,91 @@ Aplikasi ini menggunakan struktur data Binary Search Tree (BST) atau Pohon Penca
 
 <img width="768" height="321" alt="kode 6" src="https://github.com/user-attachments/assets/d91898c4-3709-4c1b-83c8-1970799de3a8" />
 
+class Node:
+
+Logika: Kita membuat sebuah cetakan atau definisi objek baru bernama Node. Anggap saja ini seperti mendesain struktur label kotak barang di gudang.
+
+def __init__(self, key, nama_barang): 
+
+Logika: fungsi persiapan awal saat sebuah kotak barang baru dibuat. Fungsi ini meminta dua informasi wajib: harga barang (key) dan nama barangnya (nama_barang).
+
+self.key = key 
+
+Logika: Komputer mencatat dan mengunci nominal harga yang dimasukkan ke dalam variabel internal bernama key.
+
+self.nama_barang = nama_barang 
+Logika: Komputer mencatat nama barang yang dimasukkan ke dalam variabel internal bernama nama_barang.
+
+self.left = None 
+
+Menginisialisasi penunjuk arah kiri (left pointer) dengan nilai None. Ini berarti saat objek dibuat, ia belum terhubung ke anak kiri (left child).
+
+self.right = None 
+Menginisialisasi penunjuk arah kanan (right pointer) dengan nilai None. Ini berarti objek baru belum memiliki hubungan ke anak kanan (right child).
+
+class TokoBST:
+
+Mendeklarasikan kelas utama bernama TokoBST yang akan mengelola seluruh node menjadi satu kesatuan struktur pohon pencarian biner (BST).
+
+def __init__(self): 
+
+Fungsi untuk menginisialisasi status awal dari struktur data pohon.
+
+self.root = None 
+
+Mengatur atribut .root (node akar teratas) dengan nilai awal None, menandakan bahwa pohon dalam kondisi kosong (empty tree).
+
+def insert_node(self, root, key, nama_barang): 
+fungsi rekursif internal untuk mencari posisi selip yang tepat. Menerima argumen berupa status node saat ini (root), nilai key baru, dan nama_barang baru.
+
+if root is None:
+
+Kondisi berhenti rekursif (base case). Memeriksa apakah posisi pointer saat ini bernilai kosong (None).
+
+return Node(key, nama_barang) 
+
+Jika kondisi terpenuhi, fungsi akan melakukan instansiasi objek Node baru menggunakan argumen tersebut dan mengembalikannya ke pemanggil.
+
+if key < root.key: 
+
+Kondisi percabangan pertama. Membandingkan apakah nilai key baru lebih kecil dari nilai .key milik node saat ini.
+
+root.left = self.insert_node(root.left, key, nama_barang) 
+Jika kondisi lebih kecil terpenuhi, fungsi memanggil dirinya sendiri secara rekursif ke arah root.left dan hasilnya diikat kembali ke penunjuk .left node saat ini.
+
+elif key > root.key: 
+
+Kondisi percabangan kedua. Memeriksa apakah nilai key baru lebih besar dari nilai .key milik node saat ini.
+
+root.right = self.insert_node(root.right, key, nama_barang) 
+
+Jika kondisi lebih besar terpenuhi, fungsi memanggil dirinya sendiri secara rekursif ke arah root.right dan hasilnya diikat kembali ke penunjuk .right node saat ini.
+
+return root 
+
+Mengembalikan referensi alamat memori dari node saat ini (root) untuk menjaga keutuhan struktur pohon yang terhubung setelah rekursi selesai.
+
+
+def insert(self, key, nama_barang): 
+
+Fungsi antarmuka publik yang dieksekusi oleh pengguna untuk menambahkan data.
+
+self.root = self.insert_node(self.root, key, nama_barang) (Baris 23)
+
+Memulai eksekusi fungsi rekursif insert_node dengan mengoper titik mulai dari akar utama pohon (self.root), lalu memperbarui status .root dengan pohon baru.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 **Output**
