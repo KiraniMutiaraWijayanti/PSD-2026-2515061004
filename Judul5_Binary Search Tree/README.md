@@ -32,7 +32,11 @@ Aplikasi ini menggunakan struktur data Binary Search Tree (BST) atau Pohon Penca
 
 <img width="630" height="607" alt="output 3" src="https://github.com/user-attachments/assets/d61c5598-1358-4424-b0f2-6b9a0339b4f8" />
 
+Saat pengguna memasukkan Baju Cardigan seharga 30000 rupiah, program langsung menempatkannya ke posisi cabang yang tepat agar urutan pohon tidak berantakan. Keunggulan sistem ini langsung terlihat saat pengguna mencari harga 15000 rupiah, di mana program bisa langsung menemukan Gantungan Kunci secara instan tanpa harus mengecek seluruh barang satu per satu dari awal.
 
+Kerapian sistem pohon ini terbukti saat semua daftar barang dicetak. Karena data yang lebih murah selalu ditaruh di sebelah kiri dan yang lebih mahal di sebelah kanan, program tinggal membacanya secara berurutan dari kiri ke kanan untuk menghasilkan daftar katalog yang otomatis terurut dari harga termurah sampai termahal. Melalui logika yang sama, program juga bisa langsung menunjuk ujung cabang paling kiri untuk menemukan produk termurah dan ujung cabang paling kanan untuk produk termahal, yaitu Gantungan Kunci dan Jaket Denim.
+
+Pada bagian akhir, program menghitung total seluruh titik data yang aktif di dalam memorinya untuk mengetahui bahwa ada enam jenis variasi produk di dalam toko. Bersamaan dengan itu, program juga menjumlahkan angka harga dari setiap barang yang ada di dalam jaringan pohon tersebut untuk menghasilkan hitungan total nilai aset toko secara tepat, yaitu sebesar 315000 rupiah.
 
 
 
