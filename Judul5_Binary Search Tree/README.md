@@ -24,8 +24,13 @@ Aplikasi ini menggunakan struktur data Binary Search Tree (BST) atau Pohon Penca
 
 
 
+**Output**
 
+<img width="631" height="459" alt="output 1" src="https://github.com/user-attachments/assets/5554f112-717b-417a-8c56-41ad0680f931" />
 
+<img width="534" height="550" alt="output 2" src="https://github.com/user-attachments/assets/0d50a34e-be28-4bb8-a961-b0d88fc1a000" />
+
+<img width="630" height="607" alt="output 3" src="https://github.com/user-attachments/assets/d61c5598-1358-4424-b0f2-6b9a0339b4f8" />
 
 
 
