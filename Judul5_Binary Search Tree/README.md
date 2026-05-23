@@ -437,7 +437,7 @@ Kerapian sistem pohon ini terbukti saat semua daftar barang dicetak. Karena data
 Pada bagian akhir, program menghitung total seluruh titik data yang aktif di dalam memorinya untuk mengetahui bahwa ada enam jenis variasi produk di dalam toko. Bersamaan dengan itu, program juga menjumlahkan angka harga dari setiap barang yang ada di dalam jaringan pohon tersebut untuk menghasilkan hitungan total nilai aset toko secara tepat, yaitu sebesar 315000 rupiah.
 
 
-
+https://youtu.be/YFXwxyGdwcc
 
 
 
