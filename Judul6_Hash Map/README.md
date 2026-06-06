@@ -292,7 +292,12 @@ Output
 
 <img width="800" height="453" alt="output 1" src="https://github.com/user-attachments/assets/522596cc-0dd3-4c40-9d06-c0ea15ff1e89" />
 
-Output dari program diatas adalah memetakan memori tabel hash dan melakukan pencarian secara akurat. Empat data kendaraan berhasil disimpan ke dalam slot yang sesuai dengan sisa hasil bagi fungsi hash modulo: kunci 33 di indeks 3, 15 di indeks 5, 18 di indeks 8, dan 49 di indeks 9, sementara slot lainnya tetap berstatus EMPTY. 
+Output dari program diatas adalah memetakan memori tabel hash dan melakukan pencarian secara akurat. Empat data kendaraan berhasil disimpan ke dalam slot yang sesuai dengan sisa hasil bagi fungsi hash modulo: 
+kunci 33 di indeks 3 karena kunci 33 modulo 10 menghasilkan indeks 3, 
+15 di indeks 5 karena kunci 15 modulo 10 menghasilkan indeks 5, 
+18 di indeks 8 karena kunci 18 modulo 10 menghasilkan indeks 8, 
+dan 49 di indeks 9 karena 49 modulo 10 menghasilkan indeks 9, 
+sementara slot lainnya tetap berstatus EMPTY. 
 
 Kemudian program mendemonstrasikan fitur pencarian instan untuk kunci 18, 33, dan 49. Sistem langsung menuju indeks hasil kalkulasi hash masing-masing dan sukses mencetak informasi detail kendaraan beserta nama pemiliknya ke layar terminal tanpa harus memindai seluruh isi tabel dari awal.
 
