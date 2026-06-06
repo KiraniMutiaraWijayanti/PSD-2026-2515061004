@@ -19,3 +19,5 @@ Source Kode
 Output
 
 <img width="800" height="453" alt="output 1" src="https://github.com/user-attachments/assets/522596cc-0dd3-4c40-9d06-c0ea15ff1e89" />
+
+Output dari program diatas adalah memetakan memori tabel hash dan melakukan pencarian secara akurat. 
