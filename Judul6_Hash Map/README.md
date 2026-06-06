@@ -294,8 +294,11 @@ Output
 
 Output dari program diatas adalah memetakan memori tabel hash dan melakukan pencarian secara akurat. Empat data kendaraan berhasil disimpan ke dalam slot yang sesuai dengan sisa hasil bagi fungsi hash modulo: 
 kunci 33 di indeks 3 karena kunci 33 modulo 10 menghasilkan indeks 3, 
+
 15 di indeks 5 karena kunci 15 modulo 10 menghasilkan indeks 5, 
-18 di indeks 8 karena kunci 18 modulo 10 menghasilkan indeks 8, 
+
+18 di indeks 8 karena kunci 18 modulo 10 menghasilkan indeks 8,
+
 dan 49 di indeks 9 karena 49 modulo 10 menghasilkan indeks 9, 
 sementara slot lainnya tetap berstatus EMPTY. 
 
