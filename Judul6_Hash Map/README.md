@@ -292,7 +292,8 @@ Output
 
 <img width="800" height="453" alt="output 1" src="https://github.com/user-attachments/assets/522596cc-0dd3-4c40-9d06-c0ea15ff1e89" />
 
-Output dari program diatas adalah memetakan memori tabel hash dan melakukan pencarian secara akurat. Empat data kendaraan berhasil disimpan ke dalam slot yang sesuai dengan sisa hasil bagi fungsi hash modulo: 
+Output dari program diatas adalah memetakan memori tabel hash dan melakukan pencarian secara akurat. Empat data kendaraan berhasil disimpan ke dalam slot yang sesuai dengan sisa hasil bagi fungsi hash modulo:
+
 kunci 33 di indeks 3 karena kunci 33 modulo 10 menghasilkan indeks 3, 
 
 15 di indeks 5 karena kunci 15 modulo 10 menghasilkan indeks 5, 
