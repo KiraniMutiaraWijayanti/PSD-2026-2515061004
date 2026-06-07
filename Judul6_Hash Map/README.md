@@ -1,10 +1,10 @@
-**Program**
+**Sistem Manajemen Nilai Mahasiswa**
 
 **Deskripsi Singkat**
 
-Program ini adalah simulasi database kendaraan berbasis Hash Table berukuran 10 slot yang berfungsi menyimpan dan mencari data plat nomor berdasarkan kunci angka.
+Penjelasan singkatnya, program ini adalah aplikasi simulasi database sederhana yang memanfaatkan struktur data Hash Table dengan metode Open Addressing (Linear Probing) berkapasitas 10 slot. Program bekerja secara efisien menggunakan fungsi hash modulo untuk mengonversi kunci angka (seperti NPM atau kode plat) menjadi indeks memori secara instan. Jika terjadi bentrokan indeks (collision), sistem akan otomatis mencari slot kosong terdekat berikutnya secara berurutan. 
 
-Struktur data ini menggunakan fungsi hash modulo untuk menentukan posisi indeks data secara cepat. Jika terjadi bentrokan indeks (collision), metode Open Addressing dengan Linear Probing akan mencari slot terdekat berikutnya secara berurutan. Keandalan sistem ini didukung oleh Manajemen Status Slot (EMPTY, OCCUPIED, DELETED) yang menjaga agar alur pencarian data tidak terputus saat ada data yang dihapus. Di akhir program, mekanisme ini langsung diuji melalui penginputan empat data motor serta simulasi pencarian kuncinya.
+Melalui manajemen status slot (EMPTY, OCCUPIED, DELETED), program menjamin proses penyimpanan, penghapusan, dan pencarian data dapat dilakukan dengan cepat dan akurat tanpa harus memindai seluruh isi tabel dari awal.
 
 Source Kode
 
