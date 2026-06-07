@@ -16,183 +16,188 @@ Source Kode
 
 <img width="638" height="480" alt="kode 4" src="https://github.com/user-attachments/assets/cf08263e-67b8-4dcd-91ed-38908282d914" />
 
-class SlotState:
-kelas SlotState yang digunakan sebagai penanda status setiap slot pada hash table.
+class SlotState
+
+Kelas SlotState digunakan sebagai penanda status setiap slot pada Hash Table.
 
 EMPTY = 0
 Menandakan slot masih kosong dan belum pernah digunakan.
 
 OCCUPIED = 1
-Menandakan slot sedang berisi data.
+Menandakan slot sedang berisi data mahasiswa.
 
 DELETED = 2
-Menandakan data pada slot sudah dihapus tetapi slot tersebut pernah digunakan.
+Menandakan data pada slot sudah dihapus tetapi slot tersebut pernah digunakan sebelumnya.
 
-class Entry:
-Membuat kelas untuk menyimpan satu data pada hash table.
+class Entry
 
-def __init__(self):
+Membuat kelas untuk menyimpan satu data mahasiswa pada Hash Table.
+
+def init(self):
 Fungsi yang dijalankan saat objek Entry dibuat.
 
 self.key = None
-Menyimpan key data. Awalnya bernilai None.
+Menyimpan key data berupa NPM mahasiswa. Awalnya bernilai None.
 
 self.value = None
-Menyimpan informasi atau nilai data. Awalnya None.
+Menyimpan informasi berupa nama mahasiswa dan nilai yang diperoleh. Awalnya bernilai None.
 
 self.state = SlotState.EMPTY
-Status awal slot adalah kosong.
+Menentukan bahwa status awal slot adalah kosong.
 
-class HashMapOpenAddressing:
-Membuat kelas hash table menggunakan metode Open Addressing.
+class HashMapOpenAddressing
 
-def __init__(self, size=10):
-Constructor untuk membuat hash table dengan ukuran 10
+Membuat kelas Hash Table menggunakan metode Open Addressing.
 
-elf.SIZE = size
-Menyimpan ukuran hash table.
+def init(self, size=10)
+
+Constructor untuk membuat Hash Table dengan ukuran 10 slot.
+
+self.SIZE = size
+Menyimpan ukuran Hash Table.
 
 self.table = [Entry() for _ in range(self.SIZE)]
-Membuat list berisi objek Entry sebanyak ukuran tabel.
+Membuat list yang berisi objek Entry sebanyak ukuran tabel.
 
-def hash_function(self, key):
-Fungsi untuk menentukan posisi data dalam tabel.
+def hash_function(self, key)
+
+Fungsi untuk menentukan posisi data mahasiswa dalam tabel.
 
 return (key % self.SIZE + self.SIZE) % self.SIZE
-Menghitung indeks hash menggunakan operasi modulo.
+Menghitung indeks hash menggunakan operasi modulo terhadap ukuran tabel.
 
-def insert(self, key, value):
-Digunakan untuk menambahkan data ke hash table.
+def insert(self, key, value)
+
+Digunakan untuk menambahkan data mahasiswa ke dalam Hash Table.
 
 idx = self.hash_function(key)
-Menghitung indeks awal berdasarkan key.
+Menghitung indeks awal berdasarkan NPM mahasiswa.
 
 first_deleted = -1
-Menyimpan posisi slot yang pernah dihapus.
-Nilai -1 berarti belum ditemukan slot DELETED.
+Menyimpan posisi slot yang pernah dihapus. Nilai -1 berarti belum ditemukan slot DELETED.
 
 for step in range(self.SIZE):
-Melakukan probing (pencarian slot kosong) sebanyak ukuran tabel.
+Melakukan probing atau pencarian slot kosong sebanyak ukuran tabel.
 
 i = (idx + step) % self.SIZE
-Menghitung posisi saat probing
+Menghitung posisi saat proses probing menggunakan Linear Probing.
 
 if self.table[i].state == SlotState.OCCUPIED:
-Memeriksa apakah slot sudah terisi.
+Memeriksa apakah slot sudah terisi data.
 
 if self.table[i].key == key:
-Jika key sama, data lama akan diperbarui
+Jika NPM yang dimasukkan sudah ada, maka data lama akan diperbarui.
 
 self.table[i].value = value
-Mengganti nilai lama.
+Mengganti data nilai mahasiswa yang lama dengan data baru.
 
 return True
-Proses selesai.
+Menandakan proses update data berhasil.
 
 elif self.table[i].state == SlotState.DELETED:
-Jika menemukan slot yang pernah dihapus.
+Memeriksa apakah slot pernah digunakan tetapi datanya sudah dihapus.
 
 if first_deleted == -1:
-Jika belum pernah menyimpan posisi DELETED.
+Jika belum ada slot DELETED yang tersimpan.
 
 first_deleted = i
-Simpan posisi tersebut.
+Menyimpan posisi slot DELETED tersebut.
 
-Jika slot EMPTY
-            else:
-Artinya slot kosong.
+else:
+Berarti slot yang ditemukan masih kosong.
 
 if first_deleted != -1:
-Jika sebelumnya ada slot DELETED.
+Jika sebelumnya ditemukan slot DELETED.
 
 i = first_deleted
-Gunakan slot DELETED tersebut.
+Menggunakan slot DELETED tersebut untuk menyimpan data baru.
 
 self.table[i].key = key
-Menyimpan key.
+Menyimpan NPM mahasiswa sebagai key.
 
 self.table[i].value = value
-Menyimpan informasi kendaraan
+Menyimpan nama mahasiswa beserta nilainya sebagai value.
 
 self.table[i].state = SlotState.OCCUPIED
-Mengubah status menjadi terisi.
+Mengubah status slot menjadi terisi.
 
 return True
-Data berhasil ditambahkan.
+Menandakan data berhasil ditambahkan.
 
 if first_deleted != -1:
-Jika tidak ada slot kosong tetapi ada slot DELETED.
+Jika tidak ditemukan slot kosong tetapi ada slot DELETED.
 
 self.table[first_deleted].key = key
-Masukkan key ke slot DELETED.
+Menyimpan NPM pada slot DELETED.
 
 self.table[first_deleted].value = value
-Masukkan value.
+Menyimpan informasi mahasiswa pada slot DELETED.
 
 self.table[first_deleted].state = SlotState.OCCUPIED
-Ubah status menjadi terisi.
+Mengubah status slot menjadi terisi.
 
 return True
-Berhasil menambah data.
+Menandakan proses penyimpanan berhasil.
 
 return False
-Jika semua slot penuh maka insert gagal.
+Jika seluruh tabel penuh dan tidak ada slot yang dapat digunakan.
 
-def search(self, key):
-Mencari data berdasarkan key.
+def search(self, key)
+
+Digunakan untuk mencari data mahasiswa berdasarkan NPM.
 
 idx = self.hash_function(key)
-Menentukan indeks awal.
+Menentukan indeks awal pencarian.
 
 for step in range(self.SIZE):
-Melakukan probing.
+Melakukan proses probing.
 
 i = (idx + step) % self.SIZE
-Menghitung indeks saat ini.
+Menghitung indeks yang sedang diperiksa.
 
 if self.table[i].state == SlotState.EMPTY:
 Jika menemukan slot kosong.
-Artinya data tidak ada.
 
 return None
-Mengembalikan nilai kosong.
+Menandakan data mahasiswa tidak ditemukan.
 
 if self.table[i].state == SlotState.OCCUPIED and self.table[i].key == key:
-Jika menemukan key yang dicari.
+Jika ditemukan NPM yang dicari.
 
 return self.table[i]
-Mengembalikan data tersebut.
+Mengembalikan data mahasiswa yang ditemukan.
 
 return None
-Jika seluruh tabel dicek dan tidak ditemukan.
+Jika seluruh tabel telah diperiksa dan data tidak ditemukan.
 
-def remove_key(self, key):
-Menghapus data berdasarkan key
+def remove_key(self, key)
+
+Digunakan untuk menghapus data mahasiswa berdasarkan NPM.
 
 entry = self.search(key)
-Mencari data terlebih dahulu.
+Mencari data mahasiswa terlebih dahulu.
 
 if entry is None:
 Jika data tidak ditemukan.
 
 return False
-Penghapusan gagal.
+Menandakan penghapusan gagal.
 
 entry.state = SlotState.DELETED
-Mengubah status menjadi DELETED.
-Data dianggap terhapus.
+Mengubah status slot menjadi DELETED sehingga data dianggap telah dihapus.
 
 return True
-Penghapusan berhasil.
+Menandakan penghapusan berhasil.
 
-def display(self):
-Menampilkan isi hash table
+def display(self)
 
-print("\nIsi Hash Table (Data Kendaraan):")
-Menampilkan judul.
+Digunakan untuk menampilkan isi Hash Table.
+
+print("\nIsi Hash Table (Data Nilai Mahasiswa):")
+Menampilkan judul data yang akan ditampilkan.
 
 for i in range(self.SIZE):
-Menelusuri semua indeks tabel.
+Menelusuri seluruh indeks pada Hash Table.
 
 print(f"{i}: ", end="")
 Menampilkan nomor indeks.
@@ -201,108 +206,103 @@ if self.table[i].state == SlotState.EMPTY:
 Jika slot kosong.
 
 print("EMPTY")
-Menampilkan EMPTY.
+Menampilkan status EMPTY.
 
 elif self.table[i].state == SlotState.DELETED:
-Jika slot dihapus.
+Jika slot pernah digunakan tetapi datanya sudah dihapus.
 
 print("DELETED")
-Menampilkan DELETED.
+Menampilkan status DELETED.
 
 else:
-Jika slot berisi data.
+Jika slot berisi data mahasiswa.
 
-print(f"(Key Angka: {self.table[i].key}, Info: {self.table[i].value})")
-Menampilkan key dan informasi kendaraan.
+print(f"(NPM: {self.table[i].key}, Nilai: {self.table[i].value})")
+Menampilkan NPM serta informasi nilai mahasiswa.
 
-def cek_plat(self, kode_plat):
-Mencari data plat kendaraan berdasarkan kode.
+def cek_nilai(self, nilai)
 
-hasil = self.search(kode_plat)
+Digunakan untuk mencari data nilai mahasiswa berdasarkan NPM.
+
+hasil = self.search(nilai)
 Memanggil fungsi pencarian.
 
 if hasil is not None:
-Jika ditemukan.
+Jika data ditemukan.
 
 print(f"Data ditemukan -> {hasil.value}")
-Menampilkan informasi kendaraan.
+Menampilkan nama mahasiswa dan nilai yang diperoleh.
 
 else:
-Jika tidak ditemukan.
+Jika data tidak ditemukan.
 
-print("Data plat motor tidak ditemukan!")
-Menampilkan pesan gagal.
+print("Data nilai Mahasiswa tidak ditemukan!")
+Menampilkan pesan bahwa data tidak tersedia.
 
-def main():
-Program utama.
+def main()
 
-data_motor = HashMapOpenAddressing(size=10)
-Membuat hash table berukuran 10.
+Merupakan fungsi utama program.
 
-data_motor.insert(18, "BD 1234 XI (Honda Beat - Wijayanti)")
-Menambahkan data kendaraan pertama.
+data_nilai = HashMapOpenAddressing(size=10)
+Membuat Hash Table dengan ukuran 10 slot.
+
+data_nilai.insert(2515061004, "Kirana Larasati = A+")
+Menambahkan data mahasiswa pertama.
 
 Hash:
-18 % 10 = 8
-Masuk indeks 8.
 
-data_motor.insert(15, "DB 8888 XY (Yamaha NMax - Mutiara)")
-15 % 10 = 5
-Masuk indeks 5.
+2515061004 % 10 = 4
 
-data_motor.insert(33, "BE 4571 XA (Suzuki Nex - Kirani)")
-33 % 10 = 3
-Masuk indeks 3.
+Disimpan pada indeks 4.
 
-data_motor.insert(49, "F 2026 FG (Vespa Sprint - Arutala)")
-49 % 10 = 9
-Masuk indeks 9.
+data_nilai.insert(2515061068, "Radita Pramesti Regita C.A = B+")
 
-data_motor.display()
-Menampilkan seluruh isi hash table.
+Hash:
+
+2515061068 % 10 = 8
+
+Disimpan pada indeks 8.
+
+data_nilai.insert(2515061009, "Dwika Prilando = B+")
+
+Hash:
+
+2515061009 % 10 = 9
+
+Disimpan pada indeks 9.
+
+data_nilai.insert(2515061001, "Budi Santoso = B")
+
+Hash:
+
+2515061001 % 10 = 1
+
+Disimpan pada indeks 1.
+
+data_nilai.display()
+Menampilkan seluruh isi Hash Table.
 
 print("-" * 50)
-Menampilkan garis pemisah
+Menampilkan garis pemisah.
 
-print("\n[Mencari Plat Motor dengan angka 18]")
+print("\n[Mencari nilai Mahasiswa dengan NPM]")
 Menampilkan judul pencarian.
 
-data_motor.cek_plat(18)
-Mencari data key 18.
+data_nilai.cek_nilai(2515061004)
+Mencari data mahasiswa dengan NPM 2515061004.
 
-print("\n[Mencari Plat Motor dengan angka 33]")
-Menampilkan judul pencarian.
+data_nilai.cek_nilai(2515061001)
+Mencari data mahasiswa dengan NPM 2515061001.
 
-data_motor.cek_plat(33)
-Mencari data key 33.
+data_nilai.cek_nilai(2515061009)
+Mencari data mahasiswa dengan NPM 2515061009.
 
-print("\n[Mencari Plat Motor dengan angka (49)]")
-Menampilkan judul pencarian.
+if name == "main":
 
-data_motor.cek_plat(49)
-Mencari data key 49.
-
-if __name__ == "__main__":
-Memastikan program dijalankan langsung, bukan diimpor dari file lain.
+Digunakan untuk memastikan program dijalankan secara langsung, bukan diimpor dari file lain.
 
 main()
-Memanggil fungsi utama.
+Memanggil fungsi utama sehingga seluruh proses penyimpanan, penampilan, dan pencarian data nilai mahasiswa dapat dijalankan.
 
-Output
-
-<img width="800" height="453" alt="output 1" src="https://github.com/user-attachments/assets/522596cc-0dd3-4c40-9d06-c0ea15ff1e89" />
-
-Output dari program diatas adalah memetakan memori tabel hash dan melakukan pencarian secara akurat. Empat data kendaraan berhasil disimpan ke dalam slot yang sesuai dengan sisa hasil bagi fungsi hash modulo:
-
-kunci 33 di indeks 3 karena kunci 33 modulo 10 menghasilkan indeks 3, 
-
-15 di indeks 5 karena kunci 15 modulo 10 menghasilkan indeks 5, 
-
-18 di indeks 8 karena kunci 18 modulo 10 menghasilkan indeks 8,
-
-dan 49 di indeks 9 karena 49 modulo 10 menghasilkan indeks 9, 
-sementara slot lainnya tetap berstatus EMPTY. 
-
-Kemudian program mendemonstrasikan fitur pencarian instan untuk kunci 18, 33, dan 49. Sistem langsung menuju indeks hasil kalkulasi hash masing-masing dan sukses mencetak informasi detail kendaraan beserta nama pemiliknya ke layar terminal tanpa harus memindai seluruh isi tabel dari awal.
 
 
