@@ -1,4 +1,4 @@
-**Program Pengecekan Motor di Parkiran**
+**Program**
 
 **Deskripsi Singkat**
 
@@ -8,13 +8,13 @@ Struktur data ini menggunakan fungsi hash modulo untuk menentukan posisi indeks 
 
 Source Kode
 
-<img width="684" height="582" alt="kode 1" src="https://github.com/user-attachments/assets/e0f855eb-aa89-4b1b-af6d-8e6c728f6c43" />
+<img width="785" height="579" alt="kode 1" src="https://github.com/user-attachments/assets/0e06f06b-668d-4344-9272-8c169d147f48" />
 
-<img width="722" height="518" alt="kode 2" src="https://github.com/user-attachments/assets/9a424a0f-3d45-4c00-ba0b-c791eafc422d" />
+<img width="766" height="517" alt="kode 2" src="https://github.com/user-attachments/assets/52b240c2-672c-4507-96d2-960d02ee7bd9" />
 
-<img width="733" height="507" alt="kode 3" src="https://github.com/user-attachments/assets/4760a5eb-f870-4581-8f24-d8e75a28492b" />
+<img width="748" height="481" alt="kode 3" src="https://github.com/user-attachments/assets/bab34586-0f0f-4f74-88cf-139e5be57bb8" />
 
-<img width="638" height="480" alt="kode 4" src="https://github.com/user-attachments/assets/cf08263e-67b8-4dcd-91ed-38908282d914" />
+<img width="692" height="472" alt="kode 4" src="https://github.com/user-attachments/assets/045ebd3f-7a54-4dbb-99b7-47d7a7100f87" />
 
 class SlotState
 
@@ -304,5 +304,9 @@ Digunakan untuk memastikan program dijalankan secara langsung, bukan diimpor dar
 main()
 Memanggil fungsi utama sehingga seluruh proses penyimpanan, penampilan, dan pencarian data nilai mahasiswa dapat dijalankan.
 
+
+**Output**
+
+<img width="717" height="453" alt="out 1" src="https://github.com/user-attachments/assets/d3c67ba0-6e70-4737-96fb-84def2b519d8" />
 
 
