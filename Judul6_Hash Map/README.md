@@ -2,7 +2,7 @@
 
 **Deskripsi Singkat**
 
-Penjelasan singkatnya, program ini adalah aplikasi simulasi database sederhana yang memanfaatkan struktur data Hash Table dengan metode Open Addressing (Linear Probing) berkapasitas 10 slot. Program bekerja secara efisien menggunakan fungsi hash modulo untuk mengonversi kunci angka (seperti NPM atau kode plat) menjadi indeks memori secara instan. Jika terjadi bentrokan indeks (collision), sistem akan otomatis mencari slot kosong terdekat berikutnya secara berurutan. 
+Penjelasan singkatnya, program ini adalah aplikasi simulasi database sederhana yang memanfaatkan struktur data Hash Table dengan metode Open Addressing (Linear Probing) berkapasitas 10 slot. Program bekerja secara efisien menggunakan fungsi hash modulo untuk mengonversi kunci angka (seperti NPM) menjadi indeks memori secara instan. Jika terjadi bentrokan indeks (collision), sistem akan otomatis mencari slot kosong terdekat berikutnya secara berurutan. 
 
 Melalui manajemen status slot (EMPTY, OCCUPIED, DELETED), program menjamin proses penyimpanan, penghapusan, dan pencarian data dapat dilakukan dengan cepat dan akurat tanpa harus memindai seluruh isi tabel dari awal.
 
