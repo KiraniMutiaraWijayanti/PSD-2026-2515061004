@@ -312,3 +312,6 @@ Memanggil fungsi utama sehingga seluruh proses penyimpanan, penampilan, dan penc
 Hasil output ini adalah hasil eksekusi program dalam memetakan data nilai mahasiswa ke memori tabel hash dan mencarinya secara akurat. Melalui kalkulasi fungsi hash modulo dari angka ujung NPM, empat data mahasiswa berhasil disimpan ke slot yang sesuai: NPM berakhiran 1 masuk ke indeks 1, akhiran 4 ke indeks 4, akhiran 8 ke indeks 8, dan akhiran 9 ke indeks 9, sementara slot sisanya tetap berstatus EMPTY.
 
 Pada proses pencarian nilai berdasarkan kueri NPM, sistem langsung menuju indeks hasil kalkulasi hash masing-masing tanpa harus memindai seluruh isi tabel dari awal. Mekanisme ini terbukti berjalan instan saat sukses memanggil dan menampilkan detail nilai milik Kirana Larasati, Budi Santoso, dan Dwika Prilando secara tepat.
+
+
+https://youtu.be/_bGdHFQ7_U0
